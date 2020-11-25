@@ -3,7 +3,8 @@
 <?import javafx.scene.control.*?>
 <?import javafx.scene.layout.*?>
 
-<VBox alignment="center" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Controller">
+<VBox alignment="center" xmlns="http://javafx.com/javafx/11.0.1"
+      xmlns:fx="http://javafx.com/fxml/1" fx:controller="Controller">
 
     <MenuBar>
         <Menu text="Файл">
@@ -33,23 +34,14 @@
             </HBox>
             <ListView fx:id="server" VBox.vgrow="ALWAYS" />
             <HBox spacing="20">
-                <Button focusTraversable="false" maxWidth="Infinity" onAction="#download" text="Скачать с сервера" HBox.hgrow="ALWAYS" />
-                <Button focusTraversable="false" maxWidth="Infinity" onAction="#btnDeleteFileServer" text="Удалить файл" HBox.hgrow="ALWAYS" />
-                <Button focusTraversable="false" maxWidth="Infinity" onAction="#btnRenameFileServer" text="Переименовать" HBox.hgrow="ALWAYS" />
+                <Button focusTraversable="false" maxWidth="Infinity" onAction="#download"
+                        text="Скачать с сервера" HBox.hgrow="ALWAYS" />
+                <Button focusTraversable="false" maxWidth="Infinity" onAction="#btnDeleteFileServer"
+                        text="Удалить файл" HBox.hgrow="ALWAYS" />
+                <Button focusTraversable="false" maxWidth="Infinity" onAction="#btnRenameFileServer"
+                        text="Переименовать" HBox.hgrow="ALWAYS" />
             </HBox>
         </VBox>
     </HBox>
 
-    <!--<AnchorPane prefHeight="615.0" prefWidth="593.0">
-        <HBox prefHeight="557.0" prefWidth="593.0">
-            <ListView fx:id="clientOLD" prefHeight="557.0" prefWidth="305.0"/>
-            <ListView fx:id="serverOLD" prefHeight="557.0" prefWidth="287.0"/>
-        </HBox>
-        <Button onAction="#download" layoutX="6.0" layoutY="557.0" mnemonicParsing="false" prefHeight="42.0"
-                prefWidth="99.0"
-                text="Скачать"/>
-        <Button onAction="#upload" layoutX="105.0" layoutY="557.0" mnemonicParsing="false" prefHeight="42.0"
-                prefWidth="99.0"
-                text="Загрузить"/>
-    </AnchorPane> -->
 </VBox>
