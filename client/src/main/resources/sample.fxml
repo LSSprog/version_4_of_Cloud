@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<VBox alignment="center" xmlns="http://javafx.com/javafx/11.0.1"
+      xmlns:fx="http://javafx.com/fxml/1" fx:controller="Controller">
+
+    <MenuBar>
+        <Menu text="Файл">
+            <MenuItem onAction="#btnExitOnClose" text="Выйти из программы" />
+        </Menu>
+    </MenuBar>
+
+    <HBox VBox.vgrow="ALWAYS">
+        <VBox HBox.hgrow="ALWAYS">
+            <Label alignment="CENTER" text="Клиент" />
+            <HBox>
+                <ComboBox fx:id="boxOfDisk" onAction="#changeDiskAction" />
+                <TextField fx:id="pathFieldClient" editable="false" HBox.hgrow="ALWAYS" />
+                <Button onAction="#bthPathUpAction" text="Вверх" />
+            </HBox>
+            <ListView fx:id="client" VBox.vgrow="ALWAYS" />
+            <HBox spacing="20">
+                <Button focusTraversable="false" maxWidth="Infinity" onAction="#upload" text="Загрузить на сервер" HBox.hgrow="ALWAYS" />
+                <Button focusTraversable="false" maxWidth="Infinity" onAction="#btnRenameFileClient" text="Переименовать" HBox.hgrow="ALWAYS" />
+            </HBox>
+        </VBox>
+
+        <VBox HBox.hgrow="ALWAYS">
+            <Label alignment="CENTER" text="Сервер" />
+            <HBox>
+                <TextField fx:id="pathFieldServer" editable="false" HBox.hgrow="ALWAYS" />
+            </HBox>
+            <ListView fx:id="server" VBox.vgrow="ALWAYS" />
+            <HBox spacing="20">
+                <Button focusTraversable="false" maxWidth="Infinity" onAction="#download"
+                        text="Скачать с сервера" HBox.hgrow="ALWAYS" />
+                <Button focusTraversable="false" maxWidth="Infinity" onAction="#btnDeleteFileServer"
+                        text="Удалить файл" HBox.hgrow="ALWAYS" />
+                <Button focusTraversable="false" maxWidth="Infinity" onAction="#btnRenameFileServer"
+                        text="Переименовать" HBox.hgrow="ALWAYS" />
+            </HBox>
+        </VBox>
+    </HBox>
+
+</VBox>
